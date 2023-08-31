@@ -3,6 +3,11 @@
 <button (click)="toggleButton()">Toggle Button</button>
 <p>Edad {{person.age}}</p>
 <button (click)="increaseAge()">Age++</button>
+<div class="box" (scroll)="onScroll($event)">
+  <p>Una jueza uruguaya aceptó un pedido de la justicia argentina con el objetivo de preservar un avión que en los años 70 y 80 se habría utilizado para trasladar a detenidos en el marco del Plan Cóndor, con el que las dictaduras latinoamericanas coordinaban su acción</p>
+</div>
+<p>Name {{person.name}}</p>
+<input type="text" [value]="person.name" (keyup)="changeName($event)">
 <hr/>
 <h1>Propiedades</h1>
 <button [disabled]="btnDisabled">Enviar</button>
