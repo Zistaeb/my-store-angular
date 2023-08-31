@@ -15,4 +15,12 @@ export class AppComponent {
     age: 23,
     avatar: 'https://image.shutterstock.com/image-photo/sleeping-beauty-princess-blonde-hair-260nw-2246498293.jpg'
   }
+
+  toggleButton() {
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  increaseAge() {
+    this.person.age += 1
+  }
 }
