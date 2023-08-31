@@ -9,4 +9,10 @@ export class AppComponent {
   name = 'Beatriz';
   age = 23;
   img = 'https://image.shutterstock.com/image-photo/sleeping-beauty-princess-blonde-hair-260nw-2246498293.jpg';
+  btnDisabled = true;
+  person = {
+    name: 'Bea',
+    age: 23,
+    avatar: 'https://image.shutterstock.com/image-photo/sleeping-beauty-princess-blonde-hair-260nw-2246498293.jpg'
+  }
 }
