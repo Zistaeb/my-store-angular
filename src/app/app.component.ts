@@ -8,6 +8,7 @@ import { ChangeDetectionStrategy } from '@angular/compiler';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   name = 'Beatriz';
   age = 23;
   img = 'https://image.shutterstock.com/image-photo/sleeping-beauty-princess-blonde-hair-260nw-2246498293.jpg';
