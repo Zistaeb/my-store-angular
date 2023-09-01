@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Product} from './product.model';
+import { ChangeDetectionStrategy } from '@angular/compiler';
 
 @Component({
   selector: 'app-root',
