@@ -111,7 +111,15 @@
   }
 }
 
-
+.buttonFormForget {
+  display: block;
+  width: 50%;
+  font-family: Bricolage_Grotesque, solid;
+  font-size: large;
+  font-weight: 800;
+  text-align: center;
+  border: transparent;
+}
 
 @media screen and (min-width: 40em) {
   .products--grid {
