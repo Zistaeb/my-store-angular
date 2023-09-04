@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./../assets/fonts/Bricolage_Grotesque.ttf');
+}
+
+* {
+  font-family: Bricolage_Grotesque, solid;
+}
+
 .box {
   height: 200px;
   width: 200px;
@@ -44,6 +53,65 @@
     border-color: green;
   }
 }
+
+#formularioh1 {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.labelForm {
+  display: block;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.inputForm {
+  display: block;
+  width: 100%;
+  border: solid lightgrey 1px;
+  min-height: calc(1.5em + 1rem + calc(var(--bs-border-width) * 2));
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.buttonForm {
+  display: block;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  background-color: aqua;
+  font-family: Bricolage_Grotesque, solid;
+  font-size: large;
+  font-weight: 800;
+  line-height: normal;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  opacity: 1;
+  &.valid{
+    border-color: cornsilk;
+  }
+}
+
+.message-error-form {
+  color: red;
+  opacity: 0;
+  &.invalid {
+    opacity: 1;
+  }
+}
+
+
 
 @media screen and (min-width: 40em) {
   .products--grid {

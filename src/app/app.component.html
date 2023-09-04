@@ -1,3 +1,45 @@
+<h1></h1>
+<form class="form" (ngSubmit)="onRegister()">
+  <div class="group">
+    <label class="labelForm" for="email">Email address</label>
+    <input class="inputForm" type="email" #emailInputForm="ngModel" name="email" required id="email" [(ngModel)]="register.email"/>
+    <p class="message-error-form" [class.invalid]="emailInputForm.invalid && nameInputForm.touched">This field is required</p>
+  </div>
+  <div class="group">
+    <label class="labelForm" for="password">Password</label>
+    <input class="inputForm" type="password" #passwordInputForm="ngModel" name="password" required id="password" [(ngModel)]="register.password"/>
+    <p class="message-error-form" [class.invalid]="passwordInputForm.invalid && nameInputForm.touched">This field is required</p>
+  </div>
+  <button class="buttonForm" [disabled]="myForm.invalid" type="submit">Login</button>
+  <br><br>
+  <button class="buttonForm" [disabled]="myForm.invalid" type="submit">Sign up</button>
+</form>
+<hr/>
+<h1 id="formularioh1">My account</h1>
+<form class="form" (ngSubmit)="onRegister()"  #myForm="ngForm">
+  <div class="input-group">
+   <label class="labelForm"  for="name">Name</label>
+   <input class="inputForm" type="text" #nameInputForm="ngModel" name="name" required id="name" [(ngModel)]="register.name"/>
+   <p class="message-error-form" [class.invalid]="nameInputForm.invalid && nameInputForm.touched" >This field is required</p>
+  </div>
+  <div class="input-group">
+    <label class="labelForm" for="email">Email address</label>
+    <input class="inputForm" type="email" #emailInputForm="ngModel" name="email" required id="email" [(ngModel)]="register.email"/>
+    <p class="message-error-form" [class.invalid]="emailInputForm.invalid && nameInputForm.touched">This field is required</p>
+   </div>
+   <div class="input-group">
+    <label class="labelForm" for="password">Password</label>
+    <input class="inputForm" type="password" #passwordInputForm="ngModel" name="password" required id="password" [(ngModel)]="register.password"/>
+    <p class="message-error-form" [class.invalid]="passwordInputForm.invalid && nameInputForm.touched">This field is required</p>
+   </div>
+   <button class="buttonForm" [disabled]="myForm.invalid" type="submit"
+    [ngClass]="{
+      'valid': nameInputForm.valid && emailInputForm.valid && passwordInputForm.valid,
+      'invalid': nameInputForm.invalid && emailInputForm.invalid && passwordInputForm.invalid,
+    }"
+   >Register</button>
+</form>
+<hr/>
 <h1>NgClass & NgStyle</h1>
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name"/>
 <hr class="line-error"

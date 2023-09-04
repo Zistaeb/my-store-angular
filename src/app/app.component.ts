@@ -13,6 +13,11 @@ export class AppComponent {
   age = 23;
   img = 'https://image.shutterstock.com/image-photo/sleeping-beauty-princess-blonde-hair-260nw-2246498293.jpg';
   btnDisabled = true;
+  register = {
+    name: "",
+    email: "",
+    password: ""
+  }
   person = {
     name: 'Bea',
     age: 23,
@@ -87,5 +92,9 @@ export class AppComponent {
 
   deleteName(index: number) {
     this.names.splice(index, 1);
+  }
+
+  onRegister() {
+    console.log(this.register);
   }
 }
